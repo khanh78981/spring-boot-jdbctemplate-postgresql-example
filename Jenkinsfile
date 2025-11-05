@@ -16,7 +16,7 @@ pipeline {
                     sh 'eval $(minikube -p minikube docker-env)'
                     
                     // Xây dựng image Docker với tag là số build của Jenkins
-                    sh 'docker build -t spring-boot-app:latest.'
+                    sh 'docker build -t spring-boot-app:latest .'
                 }
             }
         }
