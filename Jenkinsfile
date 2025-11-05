@@ -8,7 +8,12 @@ pipeline {
                 checkout scm
             }
         }
-
+        stage('Build Jar') {
+            steps {
+                sh './mvnw clean package -DskipTests'
+            }
+        }
+       
         stage('Build Docker Image') {
             steps {
                 script {
